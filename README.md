@@ -1,2 +1,2 @@
 # LP-PN
-code for Improving Meta-learning for Few-shot Text Classification via Label Propagation
+code for paper "Improving Meta-learning for Few-shot Text Classification via Label Propagation"
