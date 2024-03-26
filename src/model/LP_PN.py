@@ -98,7 +98,7 @@ class LP_PN(nn.Module):
 
         self.args = args
         self.hidden_size = 300
-        self.mu=1
+        
         if   args.rn == 300:   #fixed alpha
             self.alpha = torch.tensor([args.alpha], requires_grad=False).cuda(args.cuda)
         elif args.rn== 30:    # learned alpha
@@ -258,7 +258,7 @@ class LP_PN(nn.Module):
         
         loss_lp = ce(F, gt)
 
-        loss=ce(pred,YQ)+loss_lp*self.mu
+        loss=ce(pred,YQ)+loss_lp*self.args.mu
 
         acc = BASE.compute_acc(pred, YQ)
     

@@ -50,9 +50,6 @@ class MODEL_FE(nn.Module):
         else:
             reverse_feature = reverse_feature[:, :500]
 
-        if self.args.ablation == '-IL':
-            sentence_ebd = torch.cat((avg_sentence_ebd, sentence_ebd), 1)
-            print("%%%%%%%%%%%%%%%%%%%%This is ablation mode: -IL%%%%%%%%%%%%%%%%%%")
-
+       
 
         return sentence_ebd, reverse_feature, avg_sentence_ebd, ebd_rnn_loss, ebd_final
