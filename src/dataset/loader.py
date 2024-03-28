@@ -351,7 +351,7 @@ def load_dataset(args):
 
     tprint('Loading word vectors')
 
-    vectors = Vectors(args.word_vector, cache=args.wv_path)
+    vectors = Vectors(args.word_vector, cache=args.wv_path,url="https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.en.vec")
     vocab = Vocab(collections.Counter(_read_words(all_data)), vectors=vectors,
                   specials=['<pad>', '<unk>'], min_freq=5)
 

@@ -1,5 +1,9 @@
 # LP-PN
 code for paper "Improving Meta-learning for Few-shot Text Classification via Label Propagation"
 
-### Coming soon
+## Prepare
+You may unzip data file data.zip and put the data files under data/ folder.s
+## Quickstart
+`sh bin/LP-PN.sh`
+
 
